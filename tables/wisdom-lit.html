@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧠 Wisdom Literature Roll Table</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+      line-height: 1.6;
+      background: #f9f9f9;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      color: #34495e;
+      border-bottom: 2px solid #e67e22;
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #e67e22;
+      color: white;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    .dice-info {
+      background: #fff3e0;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    .back-link {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1rem;
+      background: #ecf0f1;
+      border-radius: 8px;
+    }
+    .back-link a {
+      color: #d35400;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+    .proverbs-row {
+      background-color: #e8f5e8;
+    }
+    .psalms-row {
+      background-color: #e3f2fd;
+    }
+    .ecclesiastes-row {
+      background-color: #fce4ec;
+    }
+    .song-row {
+      background-color: #f3e5f5;
+    }
+    .daniel-row {
+      background-color: #fff8e1;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🧠 Wisdom Literature Roll Table</h1>
+
+<p>Explore the poetic and philosophical core of the Old Testament with this Wisdom Roll Table. These books — Proverbs, Psalms, Ecclesiastes, and Song of Solomon — offer insight into human emotion, godly living, and the mysteries of life.</p>
+
+<div class="dice-info">
+  <p><strong>🎲 Webpage Option:</strong></p>
+  <p>D6 (ones place): <span id="d6">-</span></p>
+  <p>D10 (tens place): <span id="d10">-</span></p>
+  <button onclick="rollDice()" style="padding: 10px 20px; font-size: 16px; background-color: #87CEEB; color: white; border: none; border-radius: 5px; cursor: pointer; margin: 10px 0;">Roll</button>
+  
+  <hr style="margin: 20px 0; border: 1px solid #ddd;">
+  
+  <p><strong>🎲 Physical Dice Option:</strong></p>
+  <ul>
+    <li>1× D10 (tens place)</li>
+    <li>1× D6 (ones place)</li>
+  </ul>
+  <p><strong>📏 Get a number between 10–69 and read from the passage or book assigned.</strong></p>
+</div>
+
+<h2>🎲 Wisdom Roll Table (10–69)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Roll</th>
+      <th>Book</th>
+      <th>Suggested Start Chapter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="proverbs-row"><td>10</td><td>Proverbs</td><td>1</td></tr>
+    <tr class="proverbs-row"><td>11</td><td>Proverbs</td><td>2</td></tr>
+    <tr class="proverbs-row"><td>12</td><td>Proverbs</td><td>3</td></tr>
+    <tr class="proverbs-row"><td>13</td><td>Proverbs</td><td>4</td></tr>
+    <tr class="proverbs-row"><td>14</td><td>Proverbs</td><td>5</td></tr>
+    <tr class="proverbs-row"><td>15</td><td>Proverbs</td><td>6</td></tr>
+    <tr class="proverbs-row"><td>16</td><td>Proverbs</td><td>7</td></tr>
+    <tr class="proverbs-row"><td>17</td><td>Proverbs</td><td>8</td></tr>
+    <tr class="proverbs-row"><td>18</td><td>Proverbs</td><td>9</td></tr>
+    <tr class="proverbs-row"><td>19</td><td>Proverbs</td><td>10</td></tr>
+    <tr class="proverbs-row"><td>20</td><td>Proverbs</td><td>11</td></tr>
+    <tr class="proverbs-row"><td>21</td><td>Proverbs</td><td>12</td></tr>
+    <tr class="proverbs-row"><td>22</td><td>Proverbs</td><td>13</td></tr>
+    <tr class="proverbs-row"><td>23</td><td>Proverbs</td><td>14</td></tr>
+    <tr class="proverbs-row"><td>24</td><td>Proverbs</td><td>15</td></tr>
+    <tr class="proverbs-row"><td>25</td><td>Proverbs</td><td>16</td></tr>
+    <tr class="proverbs-row"><td>26</td><td>Proverbs</td><td>17</td></tr>
+    <tr class="proverbs-row"><td>27</td><td>Proverbs</td><td>18</td></tr>
+    <tr class="proverbs-row"><td>28</td><td>Proverbs</td><td>19</td></tr>
+    <tr class="proverbs-row"><td>29</td><td>Proverbs</td><td>20</td></tr>
+    <tr class="proverbs-row"><td>30</td><td>Proverbs</td><td>21</td></tr>
+    <tr class="proverbs-row"><td>31</td><td>Proverbs</td><td>22</td></tr>
+    <tr class="proverbs-row"><td>32</td><td>Proverbs</td><td>23</td></tr>
+    <tr class="proverbs-row"><td>33</td><td>Proverbs</td><td>24</td></tr>
+    <tr class="proverbs-row"><td>34</td><td>Proverbs</td><td>25</td></tr>
+    <tr class="proverbs-row"><td>35</td><td>Proverbs</td><td>26</td></tr>
+    <tr class="proverbs-row"><td>36</td><td>Proverbs</td><td>27</td></tr>
+    <tr class="proverbs-row"><td>37</td><td>Proverbs</td><td>28</td></tr>
+    <tr class="proverbs-row"><td>38</td><td>Proverbs</td><td>29</td></tr>
+    <tr class="proverbs-row"><td>39</td><td>Proverbs</td><td>30</td></tr>
+    <tr class="proverbs-row"><td>40</td><td>Proverbs</td><td>31</td></tr>
+    <tr class="psalms-row"><td>41</td><td>Psalms</td><td>1</td></tr>
+    <tr class="psalms-row"><td>42</td><td>Psalms</td><td>8</td></tr>
+    <tr class="psalms-row"><td>43</td><td>Psalms</td><td>15</td></tr>
+    <tr class="psalms-row"><td>44</td><td>Psalms</td><td>23</td></tr>
+    <tr class="psalms-row"><td>45</td><td>Psalms</td><td>33</td></tr>
+    <tr class="psalms-row"><td>46</td><td>Psalms</td><td>37</td></tr>
+    <tr class="psalms-row"><td>47</td><td>Psalms</td><td>46</td></tr>
+    <tr class="psalms-row"><td>48</td><td>Psalms</td><td>51</td></tr>
+    <tr class="psalms-row"><td>49</td><td>Psalms</td><td>63</td></tr>
+    <tr class="psalms-row"><td>50</td><td>Psalms</td><td>84</td></tr>
+    <tr class="psalms-row"><td>51</td><td>Psalms</td><td>90</td></tr>
+    <tr class="psalms-row"><td>52</td><td>Psalms</td><td>103</td></tr>
+    <tr class="psalms-row"><td>53</td><td>Psalms</td><td>111</td></tr>
+    <tr class="psalms-row"><td>54</td><td>Psalms</td><td>119</td></tr>
+    <tr class="psalms-row"><td>55</td><td>Psalms</td><td>121</td></tr>
+    <tr class="psalms-row"><td>56</td><td>Psalms</td><td>126</td></tr>
+    <tr class="psalms-row"><td>57</td><td>Psalms</td><td>130</td></tr>
+    <tr class="psalms-row"><td>58</td><td>Psalms</td><td>139</td></tr>
+    <tr class="psalms-row"><td>59</td><td>Psalms</td><td>145</td></tr>
+    <tr class="ecclesiastes-row"><td>60</td><td>Ecclesiastes</td><td>1</td></tr>
+    <tr class="ecclesiastes-row"><td>61</td><td>Ecclesiastes</td><td>3</td></tr>
+    <tr class="ecclesiastes-row"><td>62</td><td>Ecclesiastes</td><td>5</td></tr>
+    <tr class="ecclesiastes-row"><td>63</td><td>Ecclesiastes</td><td>7</td></tr>
+    <tr class="ecclesiastes-row"><td>64</td><td>Ecclesiastes</td><td>9</td></tr>
+    <tr class="song-row"><td>65</td><td>Song of Solomon</td><td>1</td></tr>
+    <tr class="song-row"><td>66</td><td>Song of Solomon</td><td>2</td></tr>
+    <tr class="song-row"><td>67</td><td>Song of Solomon</td><td>3</td></tr>
+    <tr class="song-row"><td>68</td><td>Song of Solomon</td><td>4</td></tr>
+    <tr class="daniel-row"><td>69</td><td>Daniel</td><td>4</td></tr>
+  </tbody>
+</table>
+
+<div class="back-link">
+  <p><a href="../">🔙 Back to Tables Guide</a></p>
+</div>
+
+<script>
+  function rollDice() {
+    document.getElementById('d6').textContent = Math.floor(Math.random() * 6) + 1;
+    document.getElementById('d10').textContent = Math.floor(Math.random() * 10);
+  }
+</script>
+
+</body>
+</html>

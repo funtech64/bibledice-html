@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎲 2Dice Fun</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+      background: #f0f0f0;
+    }
+    .dice-container {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+    .dice-img {
+      width: 120px;
+      height: 120px;
+    }
+    button {
+      padding: 1rem 2rem;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+      background-color: #28a745;
+      color: white;
+      border: 2px solid #1e7e34;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.2s ease;
+    }
+    button:hover {
+      background-color: #218838;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+    button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .value {
+      font-size: 20px;
+      margin-top: 0.5rem;
+    }
+    .bible-chart {
+      margin-top: 3rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #e0e0e0;
+    }
+    .chapter-help a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .chapter-help a:hover {
+      text-decoration: underline;
+    }
+    .fun-opportunity {
+      background-color: #fff3cd;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="font-size: 2.4em;">2dice.fun</h1>
+
+  <div class="dice-container">
+    <div>
+      <div id="d6-img" class="dice-img" style="background-color: #4472C4; color: white; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; border-radius: 8px;">●●<br>●●</div>
+      <div class="value" id="d6-val">4</div>
+    </div>
+    <div>
+      <div id="d10-img" class="dice-img" style="background-color: #C5504B; color: gold; display: flex; align-items: center; justify-content: center; font-size: 48px; font-weight: bold; border-radius: 8px;">0</div>
+      <div class="value" id="d10-val">0</div>
+    </div>
+  </div>
+
+  <button onclick="rollDice()" style="font-weight: bold; font-size: 1.2em;">Let's Roll!</button>
+
+  <div class="bible-chart">
+    <h2>🎲 Bible Book Number Chart 🎲</h2>
+    <p style="font-style: italic; color: #333; margin-top: 1rem; font-size: 1.15em; font-weight: bold;">Never be discouraged reading 66 books and 1,189 chapters of the Bible!</p>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Number</th>
+          <th>Old Testament</th>
+          <th></th>
+          <th>Number</th>
+          <th>New Testament</th>
+          <th></th>
+          <th>Chapter Help</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10</td>
+          <td>2 Samuel</td>
+          <td></td>
+          <td>40</td>
+          <td>Matthew</td>
+          <td></td>
+          <td class="chapter-help"><a href="tables/gospels.html">Gospels</a></td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>1 Kings</td>
+          <td></td>
+          <td>42</td>
+          <td>Luke</td>
+          <td></td>
+          <td class="chapter-help"><a href="tables/wisdom-lit.html">Wisdom Literature</a></td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>2 Kings</td>
+          <td></td>
+          <td>43</td>
+          <td>John</td>
+          <td></td>
+          <td class="chapter-help"><a href="tables/psalms.html">Psalms</a></td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>1 Chronicles</td>
+          <td></td>
+          <td>44</td>
+          <td>Acts</td>
+          <td></td>
+          <td class="chapter-help"><a href="tables/pauline-epistles2.html">Pauline Epistles 2</a></td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>2 Chronicles</td>
+          <td></td>
+          <td>45</td>
+          <td>Romans</td>
+          <td></td>
+          <td class="chapter-help"><a href="tables/isaiah.html">Isaiah</a></td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>Ezra</td>
+          <td></td>
+          <td>46</td>
+          <td>1 Corinthians</td>
+          <td></td>
+          <td class="chapter-help"><a href="tables/jeremiah.html">Jeremiah</a></td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>Nehemiah</td>
+          <td></td>
+          <td>47</td>
+          <td>2 Corinthians</td>
+          <td></td>
+          <td class="chapter-help"><a href="tables/grief-lit.html">Grief Literature</a></td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>Esther</td>
+          <td></td>
+          <td>48</td>
+          <td>Galatians</td>
+          <td></td>
+          <td class="chapter-help"><a href="tables/ezekiel.html">Ezekiel</a></td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>Job</td>
+          <td></td>
+          <td>49</td>
+          <td>Ephesians</td>
+          <td></td>
+          <td class="chapter-help"><a href="tables/daniel.html">Daniel</a></td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>Psalms</td>
+          <td></td>
+          <td>50</td>
+          <td>Philippians</td>
+          <td></td>
+          <td class="chapter-help"><a href="tables/minor-prophets.html">Minor Prophets</a></td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>Proverbs</td>
+          <td></td>
+          <td>51</td>
+          <td>Colossians</td>
+          <td></td>
+          <td class="chapter-help"><a href="tables/prophets.html">Prophets</a></td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>Ecclesiastes</td>
+          <td></td>
+          <td>52</td>
+          <td>1 Thessalonians</td>
+          <td></td>
+          <td class="chapter-help"><a href="tables/psalm119.html">Psalm 119</a></td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>Song of Solomon</td>
+          <td></td>
+          <td>53</td>
+          <td>2 Thessalonians</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>Isaiah</td>
+          <td></td>
+          <td>54</td>
+          <td>1 Timothy</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>Jeremiah</td>
+          <td></td>
+          <td>55</td>
+          <td>2 Timothy</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>Lamentations</td>
+          <td></td>
+          <td>56</td>
+          <td>Titus</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>Ezekiel</td>
+          <td></td>
+          <td>57</td>
+          <td>Philemon</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>27</td>
+          <td>Daniel</td>
+          <td></td>
+          <td>58</td>
+          <td>Hebrews</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>28</td>
+          <td>Hosea</td>
+          <td></td>
+          <td>59</td>
+          <td>James</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>29</td>
+          <td>Joel</td>
+          <td></td>
+          <td>60</td>
+          <td>1 Peter</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>30</td>
+          <td>Amos</td>
+          <td></td>
+          <td>61</td>
+          <td>2 Peter</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>31</td>
+          <td>Obadiah</td>
+          <td></td>
+          <td>62</td>
+          <td>1 John</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>32</td>
+          <td>Jonah</td>
+          <td></td>
+          <td>63</td>
+          <td>2 John</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>33</td>
+          <td>Micah</td>
+          <td></td>
+          <td>64</td>
+          <td>3 John</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>34</td>
+          <td>Nahum</td>
+          <td></td>
+          <td>65</td>
+          <td>Jude</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>35</td>
+          <td>Habakkuk</td>
+          <td></td>
+          <td>66</td>
+          <td>Revelation</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>36</td>
+          <td>Zephaniah</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>37</td>
+          <td>Haggai</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>38</td>
+          <td>Zechariah</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>39</td>
+          <td>Malachi</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <p style="text-align: center; margin-top: 2rem; color: #333; font-size: 1.1em; font-weight: bold;">Taking it offline?</p>
+    <p style="text-align: center; margin-top: 0.5rem; color: #666; font-size: 0.95em;">Use a D6 (for the ones place) and a D10 (for the tens place) to generate a number between 10 and 66 like the online tool above.<br>
+    <small>For more advanced gaming, see: <a href="https://bibledice.fun" style="color: #0066cc;">bibledice.fun</a></small></p>
+    
+<div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; align-items: center;"> 
+<div style="text-align: center;"> 
+border-radius: 8px; margin: 0 auto;">0</div> 
+<div style="font-size: 18px; margin-top: 0.5rem; font-weight: bold;">0</div> 
+</div>
+
+  <script>
+    function rollDice() {
+      const d6 = Math.floor(Math.random() * 6) + 1;
+      const d10 = Math.floor(Math.random() * 10);
+
+      // Update the displayed values
+      document.getElementById('d6-val').innerText = d6;
+      document.getElementById('d10-val').innerText = d10;
+      
+      // Update dice display with proper American dice patterns
+      const d6Dots = [
+        '', 
+        '<br>&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;<br><br>', // 1: center dot
+        '●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●', // 2: diagonal top-left to bottom-right
+        '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●<br>&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;<br>●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', // 3: bottom-left, center, top-right
+        '●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●<br><br>●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●', // 4: four corners
+        '●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●<br>&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;<br>●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●', // 5: four corners + center
+        '●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●<br>●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●<br>●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●'  // 6: two columns
+      ];
+      document.getElementById('d6-img').innerHTML = d6Dots[d6];
+      document.getElementById('d10-img').innerHTML = d10;
+    }
+  </script>
+
+</body>
+</html>
