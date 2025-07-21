@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psalms Dice Roll Tables</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #fafafa;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        table {
+            border: 1px solid #bdc3c7;
+            border-collapse: collapse;
+            width: 100%;
+            margin: 10px 0 20px 0;
+            background-color: white;
+        }
+        
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #ecf0f1;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        p {
+            margin: 10px 0;
+        }
+        
+        .example {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        
+        .method-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Psalms Dice Roll Tables</h1>
+    
+    <div class="method-section">
+        <h3>Method 1: Three-Stage Roll (1-150)</h3>
+        <p>First, roll 1d6 for the range and determine the base value:</p>
+        <table>
+            <tr><th>Roll (1d6)</th><th>Range</th><th>Description</th><th>Base Value</th></tr>
+            <tr><td>1-2</td><td>Psalms 1-50</td><td>Early Psalms</td><td>0</td></tr>
+            <tr><td>3-4</td><td>Psalms 51-100</td><td>Middle Psalms</td><td>50</td></tr>
+            <tr><td>5-6</td><td>Psalms 101-150</td><td>Later Psalms</td><td>100</td></tr>
+        </table>
+
+        <p>Then, roll 1d6 for position within the range (re-roll on 6) and find the offset:</p>
+        <table>
+            <tr><th>Roll (1d6)</th><th>Position</th><th>Offset</th></tr>
+            <tr><td>1</td><td>Chapters 1-10 of your range</td><td>0</td></tr>
+            <tr><td>2</td><td>Chapters 11-20 of your range</td><td>10</td></tr>
+            <tr><td>3</td><td>Chapters 21-30 of your range</td><td>20</td></tr>
+            <tr><td>4</td><td>Chapters 31-40 of your range</td><td>30</td></tr>
+            <tr><td>5</td><td>Chapters 41-50 of your range</td><td>40</td></tr>
+            <tr><td>6</td><td>Re-roll this die</td><td>-</td></tr>
+        </table>
+
+        <p>Last, roll 1d10 for the exact chapter and add the value (treat 0 as 10):</p>
+        <table>
+            <tr><th>Roll (1d10)</th><th>Addition</th></tr>
+            <tr><td>1</td><td>+1</td></tr>
+            <tr><td>2</td><td>+2</td></tr>
+            <tr><td>3</td><td>+3</td></tr>
+            <tr><td>4</td><td>+4</td></tr>
+            <tr><td>5</td><td>+5</td></tr>
+            <tr><td>6</td><td>+6</td></tr>
+            <tr><td>7</td><td>+7</td></tr>
+            <tr><td>8</td><td>+8</td></tr>
+            <tr><td>9</td><td>+9</td></tr>
+            <tr><td>0</td><td>+10</td></tr>
+        </table>
+
+        <div class="example">
+            <strong>Example:</strong> Roll 5 on d6 (base 100), then 1 on d6 (offset 0), then 4 on d10 (+4). 
+            Final result: 100 + 0 + 4 = Psalm 104.
+        </div>
+    </div>
+
+    <div class="method-section">
+        <h3>Method 2: Famous Psalms (Roll 1d10)</h3>
+        <table>
+            <tr><th>Roll</th><th>Psalm</th><th>Title</th></tr>
+            <tr><td>1</td><td>1</td><td>The Blessed Man</td></tr>
+            <tr><td>2</td><td>8</td><td>What Is Man?</td></tr>
+            <tr><td>3</td><td>19</td><td>The Heavens Declare</td></tr>
+            <tr><td>4</td><td>23</td><td>The Lord Is My Shepherd</td></tr>
+            <tr><td>5</td><td>27</td><td>The Lord Is My Light</td></tr>
+            <tr><td>6</td><td>46</td><td>God Is Our Refuge</td></tr>
+            <tr><td>7</td><td>51</td><td>Create in Me a Clean Heart</td></tr>
+            <tr><td>8</td><td>91</td><td>He Who Dwells in the Secret Place</td></tr>
+            <tr><td>9</td><td>103</td><td>Bless the Lord, O My Soul</td></tr>
+            <tr><td>0</td><td>139</td><td>You Have Searched Me and Known Me</td></tr>
+        </table>
+    </div>
+
+    <div class="method-section">
+        <h3>Method 3: By Category (Roll 1d6, then 1d10)</h3>
+        <p>First Roll (1d6) - Choose Category:</p>
+        <table>
+            <tr><th>Roll</th><th>Category</th><th>Second Roll Instructions</th></tr>
+            <tr><td>1</td><td>Royal/Messianic</td><td>Roll 1d10</td></tr>
+            <tr><td>2</td><td>Individual Lament</td><td>Roll 1d10</td></tr>
+            <tr><td>3</td><td>Praise & Thanksgiving</td><td>Roll 1d10</td></tr>
+            <tr><td>4</td><td>Wisdom</td><td>Roll 1d10</td></tr>
+            <tr><td>5</td><td>Communal Lament</td><td>Roll 1d10</td></tr>
+            <tr><td>6</td><td>Re-roll</td><td>Roll 1d6 again</td></tr>
+        </table>
+
+        <p><strong>Royal/Messianic Psalms:</strong></p>
+        <table>
+            <tr><th>Roll</th><th>Psalm</th><th>Roll</th><th>Psalm</th></tr>
+            <tr><td>1</td><td>2</td><td>6</td><td>89</td></tr>
+            <tr><td>2</td><td>18</td><td>7</td><td>110</td></tr>
+            <tr><td>3</td><td>20</td><td>8</td><td>132</td></tr>
+            <tr><td>4</td><td>21</td><td>9</td><td>144</td></tr>
+            <tr><td>5</td><td>45</td><td>0</td><td>Re-roll</td></tr>
+        </table>
+
+        <p><strong>Individual Lament Psalms:</strong></p>
+        <table>
+            <tr><th>Roll</th><th>Psalm</th><th>Roll</th><th>Psalm</th></tr>
+            <tr><td>1</td><td>3</td><td>6</td><td>31</td></tr>
+            <tr><td>2</td><td>6</td><td>7</td><td>42</td></tr>
+            <tr><td>3</td><td>13</td><td>8</td><td>51</td></tr>
+            <tr><td>4</td><td>22</td><td>9</td><td>69</td></tr>
+            <tr><td>5</td><td>25</td><td>0</td><td>Re-roll</td></tr>
+        </table>
+
+        <p><strong>Praise & Thanksgiving Psalms:</strong></p>
+        <table>
+            <tr><th>Roll</th><th>Psalm</th><th>Roll</th><th>Psalm</th></tr>
+            <tr><td>1</td><td>8</td><td>6</td><td>103</td></tr>
+            <tr><td>2</td><td>33</td><td>7</td><td>113</td></tr>
+            <tr><td>3</td><td>66</td><td>8</td><td>145</td></tr>
+            <tr><td>4</td><td>96</td><td>9</td><td>150</td></tr>
+            <tr><td>5</td><td>100</td><td>0</td><td>Re-roll</td></tr>
+        </table>
+
+        <p><strong>Wisdom Psalms:</strong></p>
+        <table>
+            <tr><th>Roll</th><th>Psalm</th><th>Roll</th><th>Psalm</th></tr>
+            <tr><td>1</td><td>1</td><td>6</td><td>78</td></tr>
+            <tr><td>2</td><td>37</td><td>7</td><td>119</td></tr>
+            <tr><td>3</td><td>49</td><td>8</td><td>127</td></tr>
+            <tr><td>4</td><td>73</td><td>9</td><td>133</td></tr>
+            <tr><td>5</td><td>14</td><td>0</td><td>Re-roll</td></tr>
+        </table>
+
+        <p><strong>Communal Lament Psalms:</strong></p>
+        <table>
+            <tr><th>Roll</th><th>Psalm</th><th>Roll</th><th>Psalm</th></tr>
+            <tr><td>1</td><td>44</td><td>6</td><td>85</td></tr>
+            <tr><td>2</td><td>60</td><td>7</td><td>94</td></tr>
+            <tr><td>3</td><td>74</td><td>8</td><td>126</td></tr>
+            <tr><td>4</td><td>79</td><td>9</td><td>137</td></tr>
+            <tr><td>5</td><td>80</td><td>0</td><td>Re-roll</td></tr>
+        </table>
+    </div>
+</body>
+</html>
