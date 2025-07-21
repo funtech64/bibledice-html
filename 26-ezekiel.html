@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>Ezekiel</title>
+<style>
+  body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 2rem; line-height: 1.6; background: #f9f9f9; }
+  h1 { color: #2c3e50; }
+  button { background-color: #87CEEB; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 1rem; }
+  .back { margin-top: 2rem; }
+</style>
+</head>
+<body>
+<h1>Ezekiel</h1>
+<p><strong>Author:</strong> Ezekiel</p>
+<p><strong>Date of Writing:</strong> 593-571 B.C.</p>
+<p>This book holds a key place in the biblical story.</p>
+<p>It reveals God's faithfulness and points to Christ.</p>
+<p><strong>Famous Verse (Ezekiel 36:26):</strong> And I will give you a new heart, and a new spirit I will put within you.</p>
+<p>Throughout church history, believers have drawn encouragement from this book.</p>
+<h2>Random Chapter Generator</h2>
+<p>Chapters: 48</p>
+<button onclick='roll()'>Roll Chapter</button>
+<p id='result'></p>
+<p><em>Offline option:</em> Use any dice combo to generate a number between 1 and 48.</p>
+<p class='back'><a href='index.html'>Back to Index</a></p>
+<script>
+function roll() {
+  var max = 48;
+  var num = Math.floor(Math.random() * max) + 1;
+  document.getElementById('result').innerText = 'Chapter ' + num;
+}
+</script>
+</body>
+</html>

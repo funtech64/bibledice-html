@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>John</title>
+<style>
+  body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 2rem; line-height: 1.6; background: #f9f9f9; }
+  h1 { color: #2c3e50; }
+  button { background-color: #87CEEB; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 1rem; }
+  .back { margin-top: 2rem; }
+</style>
+</head>
+<body>
+<h1>John</h1>
+<p><strong>Author:</strong> John</p>
+<p><strong>Date of Writing:</strong> A.D. 80-90</p>
+<p>This book holds a key place in the biblical story.</p>
+<p>It reveals God's faithfulness and points to Christ.</p>
+<p><strong>Famous Verse (John 1:1):</strong> In the beginning was the Word, and the Word was with God, and the Word was God.</p>
+<p>Throughout church history, believers have drawn encouragement from this book.</p>
+<h2>Random Chapter Generator</h2>
+<p>Chapters: 21</p>
+<button onclick='roll()'>Roll Chapter</button>
+<p id='result'></p>
+<p><em>Offline option:</em> Use any dice combo to generate a number between 1 and 21.</p>
+<p class='back'><a href='index.html'>Back to Index</a></p>
+<script>
+function roll() {
+  var max = 21;
+  var num = Math.floor(Math.random() * max) + 1;
+  document.getElementById('result').innerText = 'Chapter ' + num;
+}
+</script>
+</body>
+</html>
