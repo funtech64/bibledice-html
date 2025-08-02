@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -75,6 +76,105 @@
       background-color: #fff3cd;
       font-weight: bold;
     }
+
+```
+/* New footer styles */
+.offline-section {
+  margin-top: 25px;
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+.offline-section h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.feature-button {
+  display: block;
+  margin: 12px auto;
+  padding: 14px 25px;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  max-width: 300px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.chart-button {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+}
+
+.chart-button:hover {
+  background: linear-gradient(135deg, #44a08d 0%, #4ecdc4 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+}
+
+.mobile-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding-bottom: 10px;
+}
+
+.mobile-button:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.button-description {
+  display: block;
+  font-size: 0.85em;
+  font-weight: normal;
+  margin-top: 4px;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.feature-button:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.feature-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .offline-section {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+  
+  .offline-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  
+  .feature-button {
+    font-size: 1em;
+    padding: 12px 20px;
+    margin: 10px auto;
+    max-width: 280px;
+  }
+  
+  .button-description {
+    font-size: 0.8em;
+  }
+}
+```
+
   </style>
 </head>
 <body>
@@ -92,266 +192,277 @@
     </div>
   </div>
 
-  <button onclick="rollDice()" style="font-weight: bold; font-size: 1.2em;">Let's Roll!</button>
+<button onclick="rollDice()" style="font-weight: bold; font-size: 1.2em;">Let’s Roll!</button>
 
   <div class="bible-chart">
     <h2>🎲 Bible Book Number Chart 🎲</h2>
     <p style="font-style: italic; color: #333; margin-top: 1rem; font-size: 1.15em; font-weight: bold;">Never be discouraged reading 66 books and 1,189 chapters of the Bible!</p>
+
+```
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Book</th>
+      <th>Number</th>
+      <th>Book</th>
+      <th>Chapter Help</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><a href="1-genesis.html">Genesis</a></td>
+      <td>34</td>
+      <td><a href="34-nahum.html">Nahum</a></td>
+      <td class="chapter-help"><a href="tables/gospels.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><a href="2-exodus.html">Exodus</a></td>
+      <td>35</td>
+      <td><a href="35-habakkuk.html">Habakkuk</a></td>
+      <td class="chapter-help"><a href="tables/wisdom-lit.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><a href="3-leviticus.html">Leviticus</a></td>
+      <td>36</td>
+      <td><a href="36-zephaniah.html">Zephaniah</a></td>
+      <td class="chapter-help"><a href="tables/psalms.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><a href="4-numbers.html">Numbers</a></td>
+      <td>37</td>
+      <td><a href="37-haggai.html">Haggai</a></td>
+      <td class="chapter-help"><a href="tables/pauline-epistles2.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><a href="5-deuteronomy.html">Deuteronomy</a></td>
+      <td>38</td>
+      <td><a href="38-zechariah.html">Zechariah</a></td>
+      <td class="chapter-help"><a href="tables/isaiah.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><a href="6-joshua.html">Joshua</a></td>
+      <td>39</td>
+      <td><a href="39-malachi.html">Malachi</a></td>
+      <td class="chapter-help"><a href="tables/jeremiah.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><a href="7-judges.html">Judges</a></td>
+      <td>40</td>
+      <td><a href="40-matthew.html">Matthew</a></td>
+      <td class="chapter-help"><a href="tables/grief-lit.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><a href="8-ruth.html">Ruth</a></td>
+      <td>41</td>
+      <td><a href="41-mark.html">Mark</a></td>
+      <td class="chapter-help"><a href="tables/ezekiel.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td><a href="9-1-samuel.html">1 Samuel</a></td>
+      <td>42</td>
+      <td><a href="42-luke.html">Luke</a></td>
+      <td class="chapter-help"><a href="tables/daniel.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><a href="10-2-samuel.html">2 Samuel</a></td>
+      <td>43</td>
+      <td><a href="43-john.html">John</a></td>
+      <td class="chapter-help"><a href="tables/minor-prophets.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><a href="11-1-kings.html">1 Kings</a></td>
+      <td>44</td>
+      <td><a href="44-acts.html">Acts</a></td>
+      <td class="chapter-help"><a href="tables/prophets.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><a href="12-2-kings.html">2 Kings</a></td>
+      <td>45</td>
+      <td><a href="45-romans.html">Romans</a></td>
+      <td class="chapter-help"><a href="tables/psalm119.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td><a href="13-1-chronicles.html">1 Chronicles</a></td>
+      <td>46</td>
+      <td><a href="46-1-corinthians.html">1 Corinthians</a></td>
+      <td class="chapter-help"><a href="tables/gospels.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td><a href="14-2-chronicles.html">2 Chronicles</a></td>
+      <td>47</td>
+      <td><a href="47-2-corinthians.html">2 Corinthians</a></td>
+      <td class="chapter-help"><a href="tables/wisdom-lit.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td><a href="15-ezra.html">Ezra</a></td>
+      <td>48</td>
+      <td><a href="48-galatians.html">Galatians</a></td>
+      <td class="chapter-help"><a href="tables/psalms.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td><a href="16-nehemiah.html">Nehemiah</a></td>
+      <td>49</td>
+      <td><a href="49-ephesians.html">Ephesians</a></td>
+      <td class="chapter-help"><a href="tables/pauline-epistles2.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td><a href="17-esther.html">Esther</a></td>
+      <td>50</td>
+      <td><a href="50-philippians.html">Philippians</a></td>
+      <td class="chapter-help"><a href="tables/isaiah.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td><a href="18-job.html">Job</a></td>
+      <td>51</td>
+      <td><a href="51-colossians.html">Colossians</a></td>
+      <td class="chapter-help"><a href="tables/jeremiah.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td><a href="19-psalms.html">Psalms</a></td>
+      <td>52</td>
+      <td><a href="52-1-thessalonians.html">1 Thessalonians</a></td>
+      <td class="chapter-help"><a href="tables/grief-lit.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td><a href="20-proverbs.html">Proverbs</a></td>
+      <td>53</td>
+      <td><a href="53-2-thessalonians.html">2 Thessalonians</a></td>
+      <td class="chapter-help"><a href="tables/ezekiel.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td><a href="21-ecclesiastes.html">Ecclesiastes</a></td>
+      <td>54</td>
+      <td><a href="54-1-timothy.html">1 Timothy</a></td>
+      <td class="chapter-help"><a href="tables/daniel.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td><a href="22-song-of-solomon.html">Song of Solomon</a></td>
+      <td>55</td>
+      <td><a href="55-2-timothy.html">2 Timothy</a></td>
+      <td class="chapter-help"><a href="tables/minor-prophets.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td><a href="23-isaiah.html">Isaiah</a></td>
+      <td>56</td>
+      <td><a href="56-titus.html">Titus</a></td>
+      <td class="chapter-help"><a href="tables/prophets.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td><a href="24-jeremiah.html">Jeremiah</a></td>
+      <td>57</td>
+      <td><a href="57-philemon.html">Philemon</a></td>
+      <td class="chapter-help"><a href="tables/psalm119.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td><a href="25-lamentations.html">Lamentations</a></td>
+      <td>58</td>
+      <td><a href="58-hebrews.html">Hebrews</a></td>
+      <td class="chapter-help"><a href="tables/gospels.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td><a href="26-ezekiel.html">Ezekiel</a></td>
+      <td>59</td>
+      <td><a href="59-james.html">James</a></td>
+      <td class="chapter-help"><a href="tables/wisdom-lit.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td><a href="27-daniel.html">Daniel</a></td>
+      <td>60</td>
+      <td><a href="60-1-peter.html">1 Peter</a></td>
+      <td class="chapter-help"><a href="tables/psalms.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td><a href="28-hosea.html">Hosea</a></td>
+      <td>61</td>
+      <td><a href="61-2-peter.html">2 Peter</a></td>
+      <td class="chapter-help"><a href="tables/pauline-epistles2.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td><a href="29-joel.html">Joel</a></td>
+      <td>62</td>
+      <td><a href="62-1-john.html">1 John</a></td>
+      <td class="chapter-help"><a href="tables/isaiah.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td><a href="30-amos.html">Amos</a></td>
+      <td>63</td>
+      <td><a href="63-2-john.html">2 John</a></td>
+      <td class="chapter-help"><a href="tables/jeremiah.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td><a href="31-obadiah.html">Obadiah</a></td>
+      <td>64</td>
+      <td><a href="64-3-john.html">3 John</a></td>
+      <td class="chapter-help"><a href="tables/grief-lit.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td><a href="32-jonah.html">Jonah</a></td>
+      <td>65</td>
+      <td><a href="65-jude.html">Jude</a></td>
+      <td class="chapter-help"><a href="tables/ezekiel.html">Chapter Help</a></td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td><a href="33-micah.html">Micah</a></td>
+      <td>66</td>
+      <td><a href="66-revelation.html">Revelation</a></td>
+      <td class="chapter-help"><a href="tables/daniel.html">Chapter Help</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p style="text-align: center; margin-top: 2rem; color: #333; font-size: 1.1em; font-weight: bold;">Taking it offline?</p>
+<p style="text-align: center; margin-top: 0.5rem; color: #666; font-size: 0.95em;">Use a D6 (for the ones place) and a D10 (for the tens place) to generate a number between 10 and 66 like the online tool above.<br>
+<small>For more advanced gaming, see: <a href="https://bibledice.fun" style="color: #0066cc;">bibledice.fun</a></small></p>
+
+<div class="offline-section">
+    <h3>📱 Take it offline</h3>
     
-    <table>
-      <thead>
-        <tr>
-          <th>Number</th>
-          <th>Book</th>
-          <th>Number</th>
-          <th>Book</th>
-          <th>Chapter Help</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td><a href="1-genesis.html">Genesis</a></td>
-          <td>34</td>
-          <td><a href="34-nahum.html">Nahum</a></td>
-          <td class="chapter-help"><a href="tables/gospels.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td><a href="2-exodus.html">Exodus</a></td>
-          <td>35</td>
-          <td><a href="35-habakkuk.html">Habakkuk</a></td>
-          <td class="chapter-help"><a href="tables/wisdom-lit.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td><a href="3-leviticus.html">Leviticus</a></td>
-          <td>36</td>
-          <td><a href="36-zephaniah.html">Zephaniah</a></td>
-          <td class="chapter-help"><a href="tables/psalms.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td><a href="4-numbers.html">Numbers</a></td>
-          <td>37</td>
-          <td><a href="37-haggai.html">Haggai</a></td>
-          <td class="chapter-help"><a href="tables/pauline-epistles2.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td><a href="5-deuteronomy.html">Deuteronomy</a></td>
-          <td>38</td>
-          <td><a href="38-zechariah.html">Zechariah</a></td>
-          <td class="chapter-help"><a href="tables/isaiah.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td><a href="6-joshua.html">Joshua</a></td>
-          <td>39</td>
-          <td><a href="39-malachi.html">Malachi</a></td>
-          <td class="chapter-help"><a href="tables/jeremiah.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td><a href="7-judges.html">Judges</a></td>
-          <td>40</td>
-          <td><a href="40-matthew.html">Matthew</a></td>
-          <td class="chapter-help"><a href="tables/grief-lit.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td><a href="8-ruth.html">Ruth</a></td>
-          <td>41</td>
-          <td><a href="41-mark.html">Mark</a></td>
-          <td class="chapter-help"><a href="tables/ezekiel.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td><a href="9-1-samuel.html">1 Samuel</a></td>
-          <td>42</td>
-          <td><a href="42-luke.html">Luke</a></td>
-          <td class="chapter-help"><a href="tables/daniel.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td><a href="10-2-samuel.html">2 Samuel</a></td>
-          <td>43</td>
-          <td><a href="43-john.html">John</a></td>
-          <td class="chapter-help"><a href="tables/minor-prophets.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td><a href="11-1-kings.html">1 Kings</a></td>
-          <td>44</td>
-          <td><a href="44-acts.html">Acts</a></td>
-          <td class="chapter-help"><a href="tables/prophets.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td><a href="12-2-kings.html">2 Kings</a></td>
-          <td>45</td>
-          <td><a href="45-romans.html">Romans</a></td>
-          <td class="chapter-help"><a href="tables/psalm119.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>13</td>
-          <td><a href="13-1-chronicles.html">1 Chronicles</a></td>
-          <td>46</td>
-          <td><a href="46-1-corinthians.html">1 Corinthians</a></td>
-          <td class="chapter-help"><a href="tables/gospels.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>14</td>
-          <td><a href="14-2-chronicles.html">2 Chronicles</a></td>
-          <td>47</td>
-          <td><a href="47-2-corinthians.html">2 Corinthians</a></td>
-          <td class="chapter-help"><a href="tables/wisdom-lit.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>15</td>
-          <td><a href="15-ezra.html">Ezra</a></td>
-          <td>48</td>
-          <td><a href="48-galatians.html">Galatians</a></td>
-          <td class="chapter-help"><a href="tables/psalms.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>16</td>
-          <td><a href="16-nehemiah.html">Nehemiah</a></td>
-          <td>49</td>
-          <td><a href="49-ephesians.html">Ephesians</a></td>
-          <td class="chapter-help"><a href="tables/pauline-epistles2.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>17</td>
-          <td><a href="17-esther.html">Esther</a></td>
-          <td>50</td>
-          <td><a href="50-philippians.html">Philippians</a></td>
-          <td class="chapter-help"><a href="tables/isaiah.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>18</td>
-          <td><a href="18-job.html">Job</a></td>
-          <td>51</td>
-          <td><a href="51-colossians.html">Colossians</a></td>
-          <td class="chapter-help"><a href="tables/jeremiah.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>19</td>
-          <td><a href="19-psalms.html">Psalms</a></td>
-          <td>52</td>
-          <td><a href="52-1-thessalonians.html">1 Thessalonians</a></td>
-          <td class="chapter-help"><a href="tables/grief-lit.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>20</td>
-          <td><a href="20-proverbs.html">Proverbs</a></td>
-          <td>53</td>
-          <td><a href="53-2-thessalonians.html">2 Thessalonians</a></td>
-          <td class="chapter-help"><a href="tables/ezekiel.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>21</td>
-          <td><a href="21-ecclesiastes.html">Ecclesiastes</a></td>
-          <td>54</td>
-          <td><a href="54-1-timothy.html">1 Timothy</a></td>
-          <td class="chapter-help"><a href="tables/daniel.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>22</td>
-          <td><a href="22-song-of-solomon.html">Song of Solomon</a></td>
-          <td>55</td>
-          <td><a href="55-2-timothy.html">2 Timothy</a></td>
-          <td class="chapter-help"><a href="tables/minor-prophets.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>23</td>
-          <td><a href="23-isaiah.html">Isaiah</a></td>
-          <td>56</td>
-          <td><a href="56-titus.html">Titus</a></td>
-          <td class="chapter-help"><a href="tables/prophets.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>24</td>
-          <td><a href="24-jeremiah.html">Jeremiah</a></td>
-          <td>57</td>
-          <td><a href="57-philemon.html">Philemon</a></td>
-          <td class="chapter-help"><a href="tables/psalm119.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>25</td>
-          <td><a href="25-lamentations.html">Lamentations</a></td>
-          <td>58</td>
-          <td><a href="58-hebrews.html">Hebrews</a></td>
-          <td class="chapter-help"><a href="tables/gospels.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>26</td>
-          <td><a href="26-ezekiel.html">Ezekiel</a></td>
-          <td>59</td>
-          <td><a href="59-james.html">James</a></td>
-          <td class="chapter-help"><a href="tables/wisdom-lit.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>27</td>
-          <td><a href="27-daniel.html">Daniel</a></td>
-          <td>60</td>
-          <td><a href="60-1-peter.html">1 Peter</a></td>
-          <td class="chapter-help"><a href="tables/psalms.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>28</td>
-          <td><a href="28-hosea.html">Hosea</a></td>
-          <td>61</td>
-          <td><a href="61-2-peter.html">2 Peter</a></td>
-          <td class="chapter-help"><a href="tables/pauline-epistles2.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>29</td>
-          <td><a href="29-joel.html">Joel</a></td>
-          <td>62</td>
-          <td><a href="62-1-john.html">1 John</a></td>
-          <td class="chapter-help"><a href="tables/isaiah.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>30</td>
-          <td><a href="30-amos.html">Amos</a></td>
-          <td>63</td>
-          <td><a href="63-2-john.html">2 John</a></td>
-          <td class="chapter-help"><a href="tables/jeremiah.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>31</td>
-          <td><a href="31-obadiah.html">Obadiah</a></td>
-          <td>64</td>
-          <td><a href="64-3-john.html">3 John</a></td>
-          <td class="chapter-help"><a href="tables/grief-lit.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>32</td>
-          <td><a href="32-jonah.html">Jonah</a></td>
-          <td>65</td>
-          <td><a href="65-jude.html">Jude</a></td>
-          <td class="chapter-help"><a href="tables/ezekiel.html">Chapter Help</a></td>
-        </tr>
-        <tr>
-          <td>33</td>
-          <td><a href="33-micah.html">Micah</a></td>
-          <td>66</td>
-          <td><a href="66-revelation.html">Revelation</a></td>
-          <td class="chapter-help"><a href="tables/daniel.html">Chapter Help</a></td>
-        </tr>
-      </tbody>
-    </table>
+    <a href="bible-reading-chart.html" class="feature-button chart-button">
+        📖 Bible Reading Chart
+    </a>
     
-    <p style="text-align: center; margin-top: 2rem; color: #333; font-size: 1.1em; font-weight: bold;">Taking it offline?</p>
-    <p style="text-align: center; margin-top: 0.5rem; color: #666; font-size: 0.95em;">Use a D6 (for the ones place) and a D10 (for the tens place) to generate a number between 10 and 66 like the online tool above.<br>
-    <small>For more advanced gaming, see: <a href="https://bibledice.fun" style="color: #0066cc;">bibledice.fun</a></small></p>
-    
-<div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; align-items: center;"> 
-<div style="text-align: center;"> 
-border-radius: 8px; margin: 0 auto;">0</div> 
-<div style="font-size: 18px; margin-top: 0.5rem; font-weight: bold;">0</div> 
+    <a href="https://bibledice.fun" class="feature-button mobile-button" target="_blank">
+        🎲 BibleDice.fun
+        <span class="button-description">Smaller, mobile friendly and fast guide</span>
+    </a>
 </div>
+```
+
+  </div>
 
   <script>
     function rollDice() {
