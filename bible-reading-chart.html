@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Reading Chart - Interactive</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+```
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
+
+    .header {
+        background: linear-gradient(135deg, #4158d0 0%, #c850c0 100%);
+        color: white;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .progress-bar {
+        background: rgba(255,255,255,0.2);
+        border-radius: 20px;
+        height: 20px;
+        margin: 20px 0;
+        overflow: hidden;
+    }
+
+    .progress-fill {
+        background: linear-gradient(90deg, #00ff87, #60efff);
+        height: 100%;
+        border-radius: 20px;
+        transition: width 0.3s ease;
+        width: 0%;
+    }
+
+    .stats {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 15px;
+    }
+
+    .stat {
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 1.8em;
+        font-weight: bold;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    .testament {
+        margin-bottom: 40px;
+    }
+
+    .testament-title {
+        font-size: 1.8em;
+        color: #333;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #4158d0;
+    }
+
+    .section {
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        font-size: 1.3em;
+        color: #666;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .book {
+        margin-bottom: 20px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        border-left: 5px solid #4158d0;
+        transition: all 0.3s ease;
+    }
+
+    .book:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    .book.starred {
+        border-left-color: #ff6b6b;
+        background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+    }
+
+    .book-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    .book-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .star {
+        color: #ff6b6b;
+        font-size: 1.5em;
+        margin-left: 10px;
+    }
+
+    .completion-date {
+        font-size: 0.9em;
+        color: #666;
+    }
+
+    .completion-date input {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 0 5px;
+        width: 80px;
+        text-align: center;
+    }
+
+    .chapters {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+        gap: 8px;
+        margin-top: 15px;
+    }
+
+    .chapter {
+        position: relative;
+    }
+
+    .chapter-checkbox {
+        display: none;
+    }
+
+    .chapter-label {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: #e9ecef;
+        border: 2px solid #dee2e6;
+        border-radius: 8px;
+        text-align: center;
+        line-height: 36px;
+        font-size: 0.9em;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: #666;
+    }
+
+    .chapter-label:hover {
+        border-color: #4158d0;
+        transform: scale(1.1);
+    }
+
+    .chapter-checkbox:checked + .chapter-label {
+        background: linear-gradient(135deg, #4158d0 0%, #c850c0 100%);
+        border-color: #4158d0;
+        color: white;
+        transform: scale(1.05);
+    }
+
+    .save-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: linear-gradient(135deg, #4158d0 0%, #c850c0 100%);
+        color: white;
+        border: none;
+        padding: 15px 25px;
+        border-radius: 50px;
+        font-size: 1.1em;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 10px 20px rgba(65, 88, 208, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .save-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(65, 88, 208, 0.4);
+    }
+
+    @media (max-width: 768px) {
+        .chapters {
+            grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+            gap: 6px;
+        }
+        
+        .chapter-label {
+            width: 35px;
+            height: 35px;
+            line-height: 31px;
+            font-size: 0.8em;
+        }
+    }
+</style>
+```
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📖 Interactive Bible Reading Chart</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number" id="chaptersRead">0</div>
+                    <div>Chapters Read</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="booksCompleted">0</div>
+                    <div>Books Completed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="totalProgress">0%</div>
+                    <div>Total Progress</div>
+                </div>
+            </div>
+        </div>
+
+```
+    <div class="content" id="bibleContent">
+        <!-- Content will be generated by JavaScript -->
+    </div>
+</div>
+
+<button class="save-btn" onclick="saveProgress()">💾 Save Progress</button>
+
+<script>
+    const bibleBooks = [
+        // Old Testament
+        {testament: "Old Testament", section: "Law", books: [
+            {name: "Genesis", chapters: 50, starred: true, number: 1},
+            {name: "Exodus", chapters: 40, starred: false, number: 2},
+            {name: "Leviticus", chapters: 27, starred: false, number: 3},
+            {name: "Numbers", chapters: 36, starred: false, number: 4},
+            {name: "Deuteronomy", chapters: 34, starred: false, number: 5}
+        ]},
+        {testament: "Old Testament", section: "History", books: [
+            {name: "Joshua", chapters: 24, starred: false, number: 6},
+            {name: "Judges", chapters: 21, starred: false, number: 7},
+            {name: "Ruth", chapters: 4, starred: false, number: 8},
+            {name: "1 Samuel", chapters: 31, starred: false, number: 9},
+            {name: "2 Samuel", chapters: 24, starred: true, number: 10},
+            {name: "1 Kings", chapters: 22, starred: false, number: 11},
+            {name: "2 Kings", chapters: 25, starred: false, number: 12},
+            {name: "1 Chronicles", chapters: 29, starred: false, number: 13},
+            {name: "2 Chronicles", chapters: 36, starred: false, number: 14},
+            {name: "Ezra", chapters: 10, starred: false, number: 15},
+            {name: "Nehemiah", chapters: 13, starred: false, number: 16},
+            {name: "Esther", chapters: 10, starred: false, number: 17}
+        ]},
+        {testament: "Old Testament", section: "Poetry", books: [
+            {name: "Job", chapters: 42, starred: false, number: 18},
+            {name: "Psalms", chapters: 150, starred: false, number: 19},
+            {name: "Proverbs", chapters: 31, starred: true, number: 20},
+            {name: "Ecclesiastes", chapters: 12, starred: false, number: 21},
+            {name: "Song of Solomon", chapters: 8, starred: false, number: 22}
+        ]},
+        {testament: "Old Testament", section: "Major Prophets", books: [
+            {name: "Isaiah", chapters: 66, starred: false, number: 23},
+            {name: "Jeremiah", chapters: 52, starred: false, number: 24},
+            {name: "Lamentations", chapters: 5, starred: false, number: 25},
+            {name: "Ezekiel", chapters: 48, starred: false, number: 26},
+            {name: "Daniel", chapters: 12, starred: false, number: 27}
+        ]},
+        {testament: "Old Testament", section: "Minor Prophets", books: [
+            {name: "Hosea", chapters: 14, starred: false, number: 28},
+            {name: "Joel", chapters: 3, starred: false, number: 29},
+            {name: "Amos", chapters: 9, starred: false, number: 30},
+            {name: "Obadiah", chapters: 1, starred: false, number: 31},
+            {name: "Jonah", chapters: 4, starred: true, number: 32},
+            {name: "Micah", chapters: 7, starred: false, number: 33},
+            {name: "Nahum", chapters: 3, starred: false, number: 34},
+            {name: "Habakkuk", chapters: 3, starred: false, number: 35},
+            {name: "Zephaniah", chapters: 3, starred: false, number: 36},
+            {name: "Haggai", chapters: 2, starred: false, number: 37},
+            {name: "Zechariah", chapters: 14, starred: false, number: 38},
+            {name: "Malachi", chapters: 4, starred: false, number: 39}
+        ]},
+        // New Testament
+        {testament: "New Testament", section: "Gospels", books: [
+            {name: "Matthew", chapters: 28, starred: true, number: 40},
+            {name: "Mark", chapters: 16, starred: false, number: 41},
+            {name: "Luke", chapters: 24, starred: false, number: 42},
+            {name: "John", chapters: 21, starred: false, number: 43}
+        ]},
+        {testament: "New Testament", section: "History", books: [
+            {name: "Acts", chapters: 28, starred: false, number: 44}
+        ]},
+        {testament: "New Testament", section: "Paul's Letters", books: [
+            {name: "Romans", chapters: 16, starred: false, number: 45},
+            {name: "1 Corinthians", chapters: 16, starred: false, number: 46},
+            {name: "2 Corinthians", chapters: 13, starred: false, number: 47},
+            {name: "Galatians", chapters: 6, starred: false, number: 48},
+            {name: "Ephesians", chapters: 6, starred: false, number: 49},
+            {name: "Philippians", chapters: 4, starred: true, number: 50},
+            {name: "Colossians", chapters: 4, starred: false, number: 51},
+            {name: "1 Thessalonians", chapters: 5, starred: false, number: 52},
+            {name: "2 Thessalonians", chapters: 3, starred: false, number: 53},
+            {name: "1 Timothy", chapters: 6, starred: false, number: 54},
+            {name: "2 Timothy", chapters: 4, starred: false, number: 55},
+            {name: "Titus", chapters: 3, starred: false, number: 56},
+            {name: "Philemon", chapters: 1, starred: false, number: 57}
+        ]},
+        {testament: "New Testament", section: "General Letters", books: [
+            {name: "Hebrews", chapters: 13, starred: false, number: 58},
+            {name: "James", chapters: 5, starred: false, number: 59},
+            {name: "1 Peter", chapters: 5, starred: true, number: 60},
+            {name: "2 Peter", chapters: 3, starred: false, number: 61},
+            {name: "1 John", chapters: 5, starred: false, number: 62},
+            {name: "2 John", chapters: 1, starred: false, number: 63},
+            {name: "3 John", chapters: 1, starred: false, number: 64},
+            {name: "Jude", chapters: 1, starred: false, number: 65}
+        ]},
+        {testament: "New Testament", section: "Prophecy", books: [
+            {name: "Revelation", chapters: 22, starred: false, number: 66}
+        ]}
+    ];
+
+    function generateBibleChart() {
+        const content = document.getElementById('bibleContent');
+        let currentTestament = '';
+        
+        bibleBooks.forEach(section => {
+            if (section.testament !== currentTestament) {
+                currentTestament = section.testament;
+                const testamentDiv = document.createElement('div');
+                testamentDiv.className = 'testament';
+                testamentDiv.innerHTML = `<h2 class="testament-title">${currentTestament}</h2>`;
+                content.appendChild(testamentDiv);
+            }
+            
+            const sectionDiv = document.createElement('div');
+            sectionDiv.className = 'section';
+            sectionDiv.innerHTML = `<h3 class="section-title">${section.section}</h3>`;
+            
+            section.books.forEach(book => {
+                const bookDiv = document.createElement('div');
+                bookDiv.className = `book ${book.starred ? 'starred' : ''}`;
+                
+                let chaptersHtml = '';
+                for (let i = 1; i <= book.chapters; i++) {
+                    chaptersHtml += `
+                        <div class="chapter">
+                            <input type="checkbox" id="${book.number}-${i}" class="chapter-checkbox" onchange="updateProgress()">
+                            <label for="${book.number}-${i}" class="chapter-label">${i}</label>
+                        </div>
+                    `;
+                }
+                
+                bookDiv.innerHTML = `
+                    <div class="book-header">
+                        <div class="book-title">
+                            ${book.number}. ${book.name}${book.starred ? '<span class="star">⭐</span>' : ''}
+                        </div>
+                        <div class="completion-date">
+                            Finished: <input type="text" placeholder="MM" maxlength="2" style="width: 40px"> / 
+                            <input type="text" placeholder="DD" maxlength="2" style="width: 40px"> / 
+                            <input type="text" placeholder="YYYY" maxlength="4" style="width: 60px">
+                        </div>
+                    </div>
+                    <div class="chapters">${chaptersHtml}</div>
+                `;
+                
+                sectionDiv.appendChild(bookDiv);
+            });
+            
+            content.lastElementChild.appendChild(sectionDiv);
+        });
+        
+        loadProgress();
+        updateProgress();
+    }
+
+    function updateProgress() {
+        const checkboxes = document.querySelectorAll('.chapter-checkbox');
+        const checkedBoxes = document.querySelectorAll('.chapter-checkbox:checked');
+        
+        const totalChapters = checkboxes.length;
+        const readChapters = checkedBoxes.length;
+        const percentage = Math.round((readChapters / totalChapters) * 100);
+        
+        document.getElementById('chaptersRead').textContent = readChapters;
+        document.getElementById('totalProgress').textContent = percentage + '%';
+        document.getElementById('progressFill').style.width = percentage + '%';
+        
+        // Count completed books
+        let completedBooks = 0;
+        bibleBooks.forEach(section => {
+            section.books.forEach(book => {
+                let allChaptersRead = true;
+                for (let i = 1; i <= book.chapters; i++) {
+                    if (!document.getElementById(`${book.number}-${i}`).checked) {
+                        allChaptersRead = false;
+                        break;
+                    }
+                }
+                if (allChaptersRead) completedBooks++;
+            });
+        });
+        
+        document.getElementById('booksCompleted').textContent = completedBooks;
+    }
+
+    function saveProgress() {
+        const progress = {};
+        const checkboxes = document.querySelectorAll('.chapter-checkbox:checked');
+        checkboxes.forEach(checkbox => {
+            progress[checkbox.id] = true;
+        });
+        
+        // Save completion dates
+        const dates = {};
+        document.querySelectorAll('.completion-date input').forEach(input => {
+            if (input.value) {
+                const bookElement = input.closest('.book');
+                const bookTitle = bookElement.querySelector('.book-title').textContent;
+                const bookNumber = bookTitle.split('.')[0];
+                if (!dates[bookNumber]) dates[bookNumber] = {};
+                dates[bookNumber][input.placeholder] = input.value;
+            }
+        });
+        
+        // Store in browser's local storage
+        localStorage.setItem('bibleProgress', JSON.stringify(progress));
+        localStorage.setItem('bibleDates', JSON.stringify(dates));
+        
+        // Visual feedback
+        const btn = document.querySelector('.save-btn');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '✅ Saved!';
+        btn.style.background = 'linear-gradient(135deg, #00ff87 0%, #60efff 100%)';
+        
+        setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.style.background = 'linear-gradient(135deg, #4158d0 0%, #c850c0 100%)';
+        }, 2000);
+    }
+
+    function loadProgress() {
+        const progress = JSON.parse(localStorage.getItem('bibleProgress') || '{}');
+        const dates = JSON.parse(localStorage.getItem('bibleDates') || '{}');
+        
+        // Load checked chapters
+        Object.keys(progress).forEach(chapterId => {
+            const checkbox = document.getElementById(chapterId);
+            if (checkbox) checkbox.checked = true;
+        });
+        
+        // Load completion dates
+        Object.keys(dates).forEach(bookNumber => {
+            const bookElement = document.querySelector(`.book-title:contains("${bookNumber}.")`);
+            // Implementation for loading dates would go here
+        });
+    }
+
+    // Initialize the chart when page loads
+    document.addEventListener('DOMContentLoaded', generateBibleChart);
+</script>
+```
+
+</body>
+</html>
