@@ -6,12 +6,19 @@
 <style>
   body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 2rem; line-height: 1.6; background: #f9f9f9; }
   h1 { color: #2c3e50; }
+  h2 { color: #34495e; border-bottom: 2px solid #3498db; padding-bottom: 0.5rem; }
   button { background-color: #87CEEB; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 1rem; }
   .back { margin-top: 2rem; }
+  .chapter-links { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0; }
+  .chapter-links a { color: #2980b9; text-decoration: none; display: inline-block; margin: 0.2rem 0; }
+  .chapter-links a:hover { text-decoration: underline; background-color: #f8f9fa; padding: 2px 4px; border-radius: 3px; }
+  .note { font-style: italic; color: #666; margin-bottom: 1rem; }
+  .offline-instructions { background: #f8f9fa; padding: 1rem; border-radius: 5px; margin: 1rem 0; border-left: 4px solid #87CEEB; }
+  .offline-instructions ol { margin: 0.5rem 0; }
+  .offline-instructions li { margin: 0.3rem 0; }
 </style>
 </head>
-<body>
-<h1>Psalms</h1>
+<body><h1>Psalms</h1>
 <p><strong>Author:</strong> Various</p>
 <p><strong>Date of Writing:</strong> 1000-400 B.C.</p>
 <p>This book holds a key place in the biblical story.</p>
@@ -22,8 +29,175 @@
 <p>Chapters: 150</p>
 <button onclick='roll()'>Roll Chapter</button>
 <p id='result'></p>
-<p><em>Offline option:</em> Use any dice combo to generate a number between 1 and 150.</p>
-<p class='back'><a href='index.html'>Back to Index</a></p>
+
+<div class="offline-instructions">
+<p><strong>🎲 Offline Dice Method:</strong></p>
+<ol>
+<li><strong>Roll a D6</strong> and subtract 1 for the first digit of your chapter number</li>
+<li><strong>Roll a D10</strong> (0-9) for the second digit of your chapter number</li>
+<li><strong>Combine the results</strong> to get your chapter (e.g., D6 roll of 3 minus 1 = 2, D10 roll of 7 = Chapter 27)</li>
+<li><strong>If your result is higher than 150</strong>, reroll both dice</li>
+</ol>
+<p><em>This book has 150 chapters, so valid results are 1-150.</em></p>
+</div>
+
+<h2>📖 Fast Chapter Access</h2>
+<div class="chapter-links">
+<p class="note">Chapter links open Bible Gateway in new tab - your dice page stays open!</p>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%201&version=NASB1995" target="_blank">Chapter 1 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%202&version=NASB1995" target="_blank">Chapter 2 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%203&version=NASB1995" target="_blank">Chapter 3 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%204&version=NASB1995" target="_blank">Chapter 4 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%205&version=NASB1995" target="_blank">Chapter 5 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%206&version=NASB1995" target="_blank">Chapter 6 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%207&version=NASB1995" target="_blank">Chapter 7 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%208&version=NASB1995" target="_blank">Chapter 8 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%209&version=NASB1995" target="_blank">Chapter 9 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2010&version=NASB1995" target="_blank">Chapter 10 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2011&version=NASB1995" target="_blank">Chapter 11 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2012&version=NASB1995" target="_blank">Chapter 12 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2013&version=NASB1995" target="_blank">Chapter 13 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2014&version=NASB1995" target="_blank">Chapter 14 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2015&version=NASB1995" target="_blank">Chapter 15 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2016&version=NASB1995" target="_blank">Chapter 16 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2017&version=NASB1995" target="_blank">Chapter 17 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2018&version=NASB1995" target="_blank">Chapter 18 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2019&version=NASB1995" target="_blank">Chapter 19 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2020&version=NASB1995" target="_blank">Chapter 20 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2021&version=NASB1995" target="_blank">Chapter 21 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2022&version=NASB1995" target="_blank">Chapter 22 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2023&version=NASB1995" target="_blank">Chapter 23 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2024&version=NASB1995" target="_blank">Chapter 24 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2025&version=NASB1995" target="_blank">Chapter 25 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2026&version=NASB1995" target="_blank">Chapter 26 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2027&version=NASB1995" target="_blank">Chapter 27 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2028&version=NASB1995" target="_blank">Chapter 28 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2029&version=NASB1995" target="_blank">Chapter 29 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2030&version=NASB1995" target="_blank">Chapter 30 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2031&version=NASB1995" target="_blank">Chapter 31 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2032&version=NASB1995" target="_blank">Chapter 32 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2033&version=NASB1995" target="_blank">Chapter 33 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2034&version=NASB1995" target="_blank">Chapter 34 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2035&version=NASB1995" target="_blank">Chapter 35 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2036&version=NASB1995" target="_blank">Chapter 36 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2037&version=NASB1995" target="_blank">Chapter 37 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2038&version=NASB1995" target="_blank">Chapter 38 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2039&version=NASB1995" target="_blank">Chapter 39 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2040&version=NASB1995" target="_blank">Chapter 40 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2041&version=NASB1995" target="_blank">Chapter 41 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2042&version=NASB1995" target="_blank">Chapter 42 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2043&version=NASB1995" target="_blank">Chapter 43 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2044&version=NASB1995" target="_blank">Chapter 44 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2045&version=NASB1995" target="_blank">Chapter 45 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2046&version=NASB1995" target="_blank">Chapter 46 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2047&version=NASB1995" target="_blank">Chapter 47 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2048&version=NASB1995" target="_blank">Chapter 48 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2049&version=NASB1995" target="_blank">Chapter 49 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2050&version=NASB1995" target="_blank">Chapter 50 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2051&version=NASB1995" target="_blank">Chapter 51 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2052&version=NASB1995" target="_blank">Chapter 52 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2053&version=NASB1995" target="_blank">Chapter 53 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2054&version=NASB1995" target="_blank">Chapter 54 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2055&version=NASB1995" target="_blank">Chapter 55 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2056&version=NASB1995" target="_blank">Chapter 56 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2057&version=NASB1995" target="_blank">Chapter 57 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2058&version=NASB1995" target="_blank">Chapter 58 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2059&version=NASB1995" target="_blank">Chapter 59 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2060&version=NASB1995" target="_blank">Chapter 60 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2061&version=NASB1995" target="_blank">Chapter 61 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2062&version=NASB1995" target="_blank">Chapter 62 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2063&version=NASB1995" target="_blank">Chapter 63 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2064&version=NASB1995" target="_blank">Chapter 64 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2065&version=NASB1995" target="_blank">Chapter 65 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2066&version=NASB1995" target="_blank">Chapter 66 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2067&version=NASB1995" target="_blank">Chapter 67 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2068&version=NASB1995" target="_blank">Chapter 68 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2069&version=NASB1995" target="_blank">Chapter 69 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2070&version=NASB1995" target="_blank">Chapter 70 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2071&version=NASB1995" target="_blank">Chapter 71 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2072&version=NASB1995" target="_blank">Chapter 72 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2073&version=NASB1995" target="_blank">Chapter 73 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2074&version=NASB1995" target="_blank">Chapter 74 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2075&version=NASB1995" target="_blank">Chapter 75 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2076&version=NASB1995" target="_blank">Chapter 76 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2077&version=NASB1995" target="_blank">Chapter 77 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2078&version=NASB1995" target="_blank">Chapter 78 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2079&version=NASB1995" target="_blank">Chapter 79 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2080&version=NASB1995" target="_blank">Chapter 80 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2081&version=NASB1995" target="_blank">Chapter 81 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2082&version=NASB1995" target="_blank">Chapter 82 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2083&version=NASB1995" target="_blank">Chapter 83 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2084&version=NASB1995" target="_blank">Chapter 84 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2085&version=NASB1995" target="_blank">Chapter 85 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2086&version=NASB1995" target="_blank">Chapter 86 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2087&version=NASB1995" target="_blank">Chapter 87 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2088&version=NASB1995" target="_blank">Chapter 88 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2089&version=NASB1995" target="_blank">Chapter 89 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2090&version=NASB1995" target="_blank">Chapter 90 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2091&version=NASB1995" target="_blank">Chapter 91 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2092&version=NASB1995" target="_blank">Chapter 92 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2093&version=NASB1995" target="_blank">Chapter 93 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2094&version=NASB1995" target="_blank">Chapter 94 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2095&version=NASB1995" target="_blank">Chapter 95 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2096&version=NASB1995" target="_blank">Chapter 96 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2097&version=NASB1995" target="_blank">Chapter 97 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2098&version=NASB1995" target="_blank">Chapter 98 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%2099&version=NASB1995" target="_blank">Chapter 99 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20100&version=NASB1995" target="_blank">Chapter 100 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20101&version=NASB1995" target="_blank">Chapter 101 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20102&version=NASB1995" target="_blank">Chapter 102 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20103&version=NASB1995" target="_blank">Chapter 103 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20104&version=NASB1995" target="_blank">Chapter 104 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20105&version=NASB1995" target="_blank">Chapter 105 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20106&version=NASB1995" target="_blank">Chapter 106 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20107&version=NASB1995" target="_blank">Chapter 107 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20108&version=NASB1995" target="_blank">Chapter 108 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20109&version=NASB1995" target="_blank">Chapter 109 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20110&version=NASB1995" target="_blank">Chapter 110 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20111&version=NASB1995" target="_blank">Chapter 111 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20112&version=NASB1995" target="_blank">Chapter 112 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20113&version=NASB1995" target="_blank">Chapter 113 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20114&version=NASB1995" target="_blank">Chapter 114 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20115&version=NASB1995" target="_blank">Chapter 115 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20116&version=NASB1995" target="_blank">Chapter 116 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20117&version=NASB1995" target="_blank">Chapter 117 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20118&version=NASB1995" target="_blank">Chapter 118 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20119&version=NASB1995" target="_blank">Chapter 119 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20120&version=NASB1995" target="_blank">Chapter 120 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20121&version=NASB1995" target="_blank">Chapter 121 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20122&version=NASB1995" target="_blank">Chapter 122 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20123&version=NASB1995" target="_blank">Chapter 123 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20124&version=NASB1995" target="_blank">Chapter 124 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20125&version=NASB1995" target="_blank">Chapter 125 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20126&version=NASB1995" target="_blank">Chapter 126 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20127&version=NASB1995" target="_blank">Chapter 127 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20128&version=NASB1995" target="_blank">Chapter 128 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20129&version=NASB1995" target="_blank">Chapter 129 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20130&version=NASB1995" target="_blank">Chapter 130 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20131&version=NASB1995" target="_blank">Chapter 131 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20132&version=NASB1995" target="_blank">Chapter 132 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20133&version=NASB1995" target="_blank">Chapter 133 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20134&version=NASB1995" target="_blank">Chapter 134 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20135&version=NASB1995" target="_blank">Chapter 135 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20136&version=NASB1995" target="_blank">Chapter 136 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20137&version=NASB1995" target="_blank">Chapter 137 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20138&version=NASB1995" target="_blank">Chapter 138 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20139&version=NASB1995" target="_blank">Chapter 139 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20140&version=NASB1995" target="_blank">Chapter 140 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20141&version=NASB1995" target="_blank">Chapter 141 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20142&version=NASB1995" target="_blank">Chapter 142 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20143&version=NASB1995" target="_blank">Chapter 143 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20144&version=NASB1995" target="_blank">Chapter 144 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20145&version=NASB1995" target="_blank">Chapter 145 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20146&version=NASB1995" target="_blank">Chapter 146 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20147&version=NASB1995" target="_blank">Chapter 147 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20148&version=NASB1995" target="_blank">Chapter 148 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20149&version=NASB1995" target="_blank">Chapter 149 Psalms (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Psalms%20150&version=NASB1995" target="_blank">Chapter 150 Psalms (NASB)</a><br>
+</div>
+
+<p class='back'><a href='index.html'>← Back to 2dice.fun Bible Books</a></p>
+
 <script>
 function roll() {
   var max = 150;

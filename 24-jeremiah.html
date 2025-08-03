@@ -6,12 +6,19 @@
 <style>
   body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 2rem; line-height: 1.6; background: #f9f9f9; }
   h1 { color: #2c3e50; }
+  h2 { color: #34495e; border-bottom: 2px solid #3498db; padding-bottom: 0.5rem; }
   button { background-color: #87CEEB; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 1rem; }
   .back { margin-top: 2rem; }
+  .chapter-links { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0; }
+  .chapter-links a { color: #2980b9; text-decoration: none; display: inline-block; margin: 0.2rem 0; }
+  .chapter-links a:hover { text-decoration: underline; background-color: #f8f9fa; padding: 2px 4px; border-radius: 3px; }
+  .note { font-style: italic; color: #666; margin-bottom: 1rem; }
+  .offline-instructions { background: #f8f9fa; padding: 1rem; border-radius: 5px; margin: 1rem 0; border-left: 4px solid #87CEEB; }
+  .offline-instructions ol { margin: 0.5rem 0; }
+  .offline-instructions li { margin: 0.3rem 0; }
 </style>
 </head>
-<body>
-<h1>Jeremiah</h1>
+<body><h1>Jeremiah</h1>
 <p><strong>Author:</strong> Jeremiah</p>
 <p><strong>Date of Writing:</strong> 626-580 B.C.</p>
 <p>This book holds a key place in the biblical story.</p>
@@ -22,8 +29,77 @@
 <p>Chapters: 52</p>
 <button onclick='roll()'>Roll Chapter</button>
 <p id='result'></p>
-<p><em>Offline option:</em> Use any dice combo to generate a number between 1 and 52.</p>
-<p class='back'><a href='index.html'>Back to Index</a></p>
+
+<div class="offline-instructions">
+<p><strong>🎲 Offline Dice Method:</strong></p>
+<ol>
+<li><strong>Roll a D6</strong> and subtract 1 for the first digit of your chapter number</li>
+<li><strong>Roll a D10</strong> (0-9) for the second digit of your chapter number</li>
+<li><strong>Combine the results</strong> to get your chapter (e.g., D6 roll of 3 minus 1 = 2, D10 roll of 7 = Chapter 27)</li>
+<li><strong>If your result is higher than 52</strong>, reroll both dice</li>
+</ol>
+<p><em>This book has 52 chapters, so valid results are 1-52.</em></p>
+</div>
+
+<h2>📖 Fast Chapter Access</h2>
+<div class="chapter-links">
+<p class="note">Chapter links open Bible Gateway in new tab - your dice page stays open!</p>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%201&version=NASB1995" target="_blank">Chapter 1 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%202&version=NASB1995" target="_blank">Chapter 2 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%203&version=NASB1995" target="_blank">Chapter 3 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%204&version=NASB1995" target="_blank">Chapter 4 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%205&version=NASB1995" target="_blank">Chapter 5 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%206&version=NASB1995" target="_blank">Chapter 6 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%207&version=NASB1995" target="_blank">Chapter 7 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%208&version=NASB1995" target="_blank">Chapter 8 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%209&version=NASB1995" target="_blank">Chapter 9 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2010&version=NASB1995" target="_blank">Chapter 10 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2011&version=NASB1995" target="_blank">Chapter 11 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2012&version=NASB1995" target="_blank">Chapter 12 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2013&version=NASB1995" target="_blank">Chapter 13 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2014&version=NASB1995" target="_blank">Chapter 14 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2015&version=NASB1995" target="_blank">Chapter 15 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2016&version=NASB1995" target="_blank">Chapter 16 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2017&version=NASB1995" target="_blank">Chapter 17 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2018&version=NASB1995" target="_blank">Chapter 18 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2019&version=NASB1995" target="_blank">Chapter 19 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2020&version=NASB1995" target="_blank">Chapter 20 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2021&version=NASB1995" target="_blank">Chapter 21 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2022&version=NASB1995" target="_blank">Chapter 22 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2023&version=NASB1995" target="_blank">Chapter 23 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2024&version=NASB1995" target="_blank">Chapter 24 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2025&version=NASB1995" target="_blank">Chapter 25 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2026&version=NASB1995" target="_blank">Chapter 26 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2027&version=NASB1995" target="_blank">Chapter 27 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2028&version=NASB1995" target="_blank">Chapter 28 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2029&version=NASB1995" target="_blank">Chapter 29 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2030&version=NASB1995" target="_blank">Chapter 30 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2031&version=NASB1995" target="_blank">Chapter 31 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2032&version=NASB1995" target="_blank">Chapter 32 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2033&version=NASB1995" target="_blank">Chapter 33 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2034&version=NASB1995" target="_blank">Chapter 34 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2035&version=NASB1995" target="_blank">Chapter 35 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2036&version=NASB1995" target="_blank">Chapter 36 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2037&version=NASB1995" target="_blank">Chapter 37 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2038&version=NASB1995" target="_blank">Chapter 38 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2039&version=NASB1995" target="_blank">Chapter 39 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2040&version=NASB1995" target="_blank">Chapter 40 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2041&version=NASB1995" target="_blank">Chapter 41 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2042&version=NASB1995" target="_blank">Chapter 42 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2043&version=NASB1995" target="_blank">Chapter 43 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2044&version=NASB1995" target="_blank">Chapter 44 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2045&version=NASB1995" target="_blank">Chapter 45 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2046&version=NASB1995" target="_blank">Chapter 46 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2047&version=NASB1995" target="_blank">Chapter 47 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2048&version=NASB1995" target="_blank">Chapter 48 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2049&version=NASB1995" target="_blank">Chapter 49 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2050&version=NASB1995" target="_blank">Chapter 50 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2051&version=NASB1995" target="_blank">Chapter 51 Jeremiah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Jeremiah%2052&version=NASB1995" target="_blank">Chapter 52 Jeremiah (NASB)</a><br>
+</div>
+
+<p class='back'><a href='index.html'>← Back to 2dice.fun Bible Books</a></p>
+
 <script>
 function roll() {
   var max = 52;

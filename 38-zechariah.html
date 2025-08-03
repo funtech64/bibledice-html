@@ -6,12 +6,19 @@
 <style>
   body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 2rem; line-height: 1.6; background: #f9f9f9; }
   h1 { color: #2c3e50; }
+  h2 { color: #34495e; border-bottom: 2px solid #3498db; padding-bottom: 0.5rem; }
   button { background-color: #87CEEB; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 1rem; }
   .back { margin-top: 2rem; }
+  .chapter-links { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0; }
+  .chapter-links a { color: #2980b9; text-decoration: none; display: inline-block; margin: 0.2rem 0; }
+  .chapter-links a:hover { text-decoration: underline; background-color: #f8f9fa; padding: 2px 4px; border-radius: 3px; }
+  .note { font-style: italic; color: #666; margin-bottom: 1rem; }
+  .offline-instructions { background: #f8f9fa; padding: 1rem; border-radius: 5px; margin: 1rem 0; border-left: 4px solid #87CEEB; }
+  .offline-instructions ol { margin: 0.5rem 0; }
+  .offline-instructions li { margin: 0.3rem 0; }
 </style>
 </head>
-<body>
-<h1>Zechariah</h1>
+<body><h1>Zechariah</h1>
 <p><strong>Author:</strong> Zechariah</p>
 <p><strong>Date of Writing:</strong> 520-480 B.C.</p>
 <p>This book holds a key place in the biblical story.</p>
@@ -22,8 +29,39 @@
 <p>Chapters: 14</p>
 <button onclick='roll()'>Roll Chapter</button>
 <p id='result'></p>
-<p><em>Offline option:</em> Use any dice combo to generate a number between 1 and 14.</p>
-<p class='back'><a href='index.html'>Back to Index</a></p>
+
+<div class="offline-instructions">
+<p><strong>🎲 Offline Dice Method:</strong></p>
+<ol>
+<li><strong>Roll a D6</strong> and subtract 1 for the first digit of your chapter number</li>
+<li><strong>Roll a D10</strong> (0-9) for the second digit of your chapter number</li>
+<li><strong>Combine the results</strong> to get your chapter (e.g., D6 roll of 3 minus 1 = 2, D10 roll of 7 = Chapter 27)</li>
+<li><strong>If your result is higher than 14</strong>, reroll both dice</li>
+</ol>
+<p><em>This book has 14 chapters, so valid results are 1-14.</em></p>
+</div>
+
+<h2>📖 Fast Chapter Access</h2>
+<div class="chapter-links">
+<p class="note">Chapter links open Bible Gateway in new tab - your dice page stays open!</p>
+<a href="https://www.biblegateway.com/passage/?search=Zechariah%201&version=NASB1995" target="_blank">Chapter 1 Zechariah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Zechariah%202&version=NASB1995" target="_blank">Chapter 2 Zechariah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Zechariah%203&version=NASB1995" target="_blank">Chapter 3 Zechariah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Zechariah%204&version=NASB1995" target="_blank">Chapter 4 Zechariah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Zechariah%205&version=NASB1995" target="_blank">Chapter 5 Zechariah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Zechariah%206&version=NASB1995" target="_blank">Chapter 6 Zechariah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Zechariah%207&version=NASB1995" target="_blank">Chapter 7 Zechariah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Zechariah%208&version=NASB1995" target="_blank">Chapter 8 Zechariah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Zechariah%209&version=NASB1995" target="_blank">Chapter 9 Zechariah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Zechariah%2010&version=NASB1995" target="_blank">Chapter 10 Zechariah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Zechariah%2011&version=NASB1995" target="_blank">Chapter 11 Zechariah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Zechariah%2012&version=NASB1995" target="_blank">Chapter 12 Zechariah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Zechariah%2013&version=NASB1995" target="_blank">Chapter 13 Zechariah (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Zechariah%2014&version=NASB1995" target="_blank">Chapter 14 Zechariah (NASB)</a><br>
+</div>
+
+<p class='back'><a href='index.html'>← Back to 2dice.fun Bible Books</a></p>
+
 <script>
 function roll() {
   var max = 14;

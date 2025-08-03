@@ -6,12 +6,19 @@
 <style>
   body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 2rem; line-height: 1.6; background: #f9f9f9; }
   h1 { color: #2c3e50; }
+  h2 { color: #34495e; border-bottom: 2px solid #3498db; padding-bottom: 0.5rem; }
   button { background-color: #87CEEB; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 1rem; }
   .back { margin-top: 2rem; }
+  .chapter-links { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 2rem 0; }
+  .chapter-links a { color: #2980b9; text-decoration: none; display: inline-block; margin: 0.2rem 0; }
+  .chapter-links a:hover { text-decoration: underline; background-color: #f8f9fa; padding: 2px 4px; border-radius: 3px; }
+  .note { font-style: italic; color: #666; margin-bottom: 1rem; }
+  .offline-instructions { background: #f8f9fa; padding: 1rem; border-radius: 5px; margin: 1rem 0; border-left: 4px solid #87CEEB; }
+  .offline-instructions ol { margin: 0.5rem 0; }
+  .offline-instructions li { margin: 0.3rem 0; }
 </style>
 </head>
-<body>
-<h1>Genesis</h1>
+<body><h1>Genesis</h1>
 <p><strong>Author:</strong> Traditionally Moses</p>
 <p><strong>Date of Writing:</strong> around 1440-1400 B.C.</p>
 <p>This book holds a key place in the biblical story.</p>
@@ -22,8 +29,75 @@
 <p>Chapters: 50</p>
 <button onclick='roll()'>Roll Chapter</button>
 <p id='result'></p>
-<p><em>Offline option:</em> Use any dice combo to generate a number between 1 and 50.</p>
-<p class='back'><a href='index.html'>Back to Index</a></p>
+
+<div class="offline-instructions">
+<p><strong>🎲 Offline Dice Method:</strong></p>
+<ol>
+<li><strong>Roll a D6</strong> and subtract 1 for the first digit of your chapter number</li>
+<li><strong>Roll a D10</strong> (0-9) for the second digit of your chapter number</li>
+<li><strong>Combine the results</strong> to get your chapter (e.g., D6 roll of 3 minus 1 = 2, D10 roll of 7 = Chapter 27)</li>
+<li><strong>If your result is higher than 50</strong>, reroll both dice</li>
+</ol>
+<p><em>This book has 50 chapters, so valid results are 1-50.</em></p>
+</div>
+
+<h2>📖 Fast Chapter Access</h2>
+<div class="chapter-links">
+<p class="note">Chapter links open Bible Gateway in new tab - your dice page stays open!</p>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%201&version=NASB1995" target="_blank">Chapter 1 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%202&version=NASB1995" target="_blank">Chapter 2 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%203&version=NASB1995" target="_blank">Chapter 3 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%204&version=NASB1995" target="_blank">Chapter 4 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%205&version=NASB1995" target="_blank">Chapter 5 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%206&version=NASB1995" target="_blank">Chapter 6 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%207&version=NASB1995" target="_blank">Chapter 7 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%208&version=NASB1995" target="_blank">Chapter 8 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%209&version=NASB1995" target="_blank">Chapter 9 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2010&version=NASB1995" target="_blank">Chapter 10 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2011&version=NASB1995" target="_blank">Chapter 11 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2012&version=NASB1995" target="_blank">Chapter 12 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2013&version=NASB1995" target="_blank">Chapter 13 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2014&version=NASB1995" target="_blank">Chapter 14 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2015&version=NASB1995" target="_blank">Chapter 15 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2016&version=NASB1995" target="_blank">Chapter 16 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2017&version=NASB1995" target="_blank">Chapter 17 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2018&version=NASB1995" target="_blank">Chapter 18 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2019&version=NASB1995" target="_blank">Chapter 19 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2020&version=NASB1995" target="_blank">Chapter 20 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2021&version=NASB1995" target="_blank">Chapter 21 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2022&version=NASB1995" target="_blank">Chapter 22 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2023&version=NASB1995" target="_blank">Chapter 23 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2024&version=NASB1995" target="_blank">Chapter 24 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2025&version=NASB1995" target="_blank">Chapter 25 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2026&version=NASB1995" target="_blank">Chapter 26 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2027&version=NASB1995" target="_blank">Chapter 27 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2028&version=NASB1995" target="_blank">Chapter 28 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2029&version=NASB1995" target="_blank">Chapter 29 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2030&version=NASB1995" target="_blank">Chapter 30 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2031&version=NASB1995" target="_blank">Chapter 31 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2032&version=NASB1995" target="_blank">Chapter 32 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2033&version=NASB1995" target="_blank">Chapter 33 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2034&version=NASB1995" target="_blank">Chapter 34 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2035&version=NASB1995" target="_blank">Chapter 35 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2036&version=NASB1995" target="_blank">Chapter 36 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2037&version=NASB1995" target="_blank">Chapter 37 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2038&version=NASB1995" target="_blank">Chapter 38 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2039&version=NASB1995" target="_blank">Chapter 39 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2040&version=NASB1995" target="_blank">Chapter 40 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2041&version=NASB1995" target="_blank">Chapter 41 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2042&version=NASB1995" target="_blank">Chapter 42 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2043&version=NASB1995" target="_blank">Chapter 43 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2044&version=NASB1995" target="_blank">Chapter 44 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2045&version=NASB1995" target="_blank">Chapter 45 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2046&version=NASB1995" target="_blank">Chapter 46 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2047&version=NASB1995" target="_blank">Chapter 47 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2048&version=NASB1995" target="_blank">Chapter 48 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2049&version=NASB1995" target="_blank">Chapter 49 Genesis (NASB)</a><br>
+<a href="https://www.biblegateway.com/passage/?search=Genesis%2050&version=NASB1995" target="_blank">Chapter 50 Genesis (NASB)</a><br>
+</div>
+
+<p class='back'><a href='index.html'>← Back to 2dice.fun Bible Books</a></p>
+
 <script>
 function roll() {
   var max = 50;
