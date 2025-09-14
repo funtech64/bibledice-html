@@ -194,7 +194,7 @@
 
 <button onclick="rollDice()" style="font-weight: bold; font-size: 1.2em;">Let’s Roll!</button>
 
-  <div class="bible-chart">
+<div class="bible-chart">
   <h2>🎲 Bible Book Number Chart 🎲</h2>
   <p style="font-style: italic; color: #333; margin-top: 1rem; font-size: 1.15em; font-weight: bold;">
     Never be discouraged reading 66 books and 1,189 chapters of the Bible!
@@ -202,27 +202,42 @@
 
   <div class="offline-section">
     <h3>📚 Instructions and Downloads</h3>
+
+    <!-- Instructions -->
     <a href="instructions.html" class="feature-button chart-button">
       📘 View How to Play Instructions
     </a>
 
-    <a href="ReadingChart.pdf" class="feature-button chart-button" download>
+    <!-- Reading Chart PDF -->
+    <a href="/BibleDice_ReadingChart.pdf"
+       class="feature-button chart-button"
+       download
+       onclick="event.stopPropagation()">
       📖 Download Bible Reading Chart (PDF)
     </a>
-    <a href="https://drive.google.com/uc?export=download&id=1lSNk-183dCsc12oHj13UpxJRdI4nHlb2" 
-       class="mirror-link" target="_blank" rel="noopener">
-      🔗 Mirror (Google Drive PDF)
-    </a>
+    <small class="mirror-link">
+      <a href="https://drive.google.com/uc?export=download&id=1lSNk-183dCsc12oHj13UpxJRdI4nHlb2"
+         target="_blank" rel="noopener">
+        Mirror (Google Drive PDF)
+      </a>
+    </small>
 
-    <a href="BibleDice_ReadingGuide.docx" class="feature-button mobile-button" download>
+    <!-- Reading Guide DOCX -->
+    <a href="/BibleDice_ReadingGuide.docx"
+       class="feature-button mobile-button"
+       download
+       onclick="event.stopPropagation()">
       📝 Download Full Reading Guide (DOCX)
     </a>
-    <a href="https://drive.google.com/uc?export=download&id=PUT_DOCX_FILE_ID_HERE"
-       class="mirror-link" target="_blank" rel="noopener">
-      🔗 Mirror (Google Drive DOCX)
-    </a>
+    <small class="mirror-link">
+      <a href="https://docs.google.com/document/d/1FpN6s8HE75IbYX9u0VcA6CztlfuXhHmY/export?format=docx"
+         target="_blank" rel="noopener">
+        Mirror (Google Docs → DOCX)
+      </a>
+    </small>
   </div>
 </div>
+
 
 
     
